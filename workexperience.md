@@ -36,7 +36,9 @@ It's quite hard to breakdown everything I worked on because I worked on qutie a 
   - Setting up a debug command system, so we as the developers are able to test things easier
   - Setting up a server command system, so we're able to address any issues the player has based on their data, give players items/currency/experience
   - Setting up a way to define how an enemy works, from their attack skills, to what chance each attack types are used, to specific events that they can use based on various conditions, all setup in a designer friendly system
-
+- ### Optimization
+  - Optimizing multiplayer netcode, this is through the use of passing in the bare bone information needed for objects, i.e. for projectiles passing in force value and start position to let the client handle the rest
+  - Optimizing performance, essentially studying the profiler in various circumstances to understand what causes frame spikes and such, and adjusting changes needed
 
 Aside from the above, I've done things like setup enemies (setting up animation controllers, and the individual animation setup), helped with git repository related issues, and have successfully updated the Unity Version that we used on two different occasions.
 * * *
