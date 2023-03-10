@@ -9,7 +9,6 @@ I worked with Unlit Games on Redemption's Guild, at first I was the only program
 This is some of the work I've done, I created the Loot collection and parry system:
 
 {% include youtubePlayer.html id=page.youtubeId %}
-{% include email_contact_panel.html %}
 
 It's quite hard to breakdown everything I worked on because I worked on qutie a lot of features, but I will try to keep the list brief:
 
