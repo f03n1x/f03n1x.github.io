@@ -25,17 +25,20 @@ It's quite hard to breakdown everything I worked on because I worked on qutie a 
   - Feature Manager systems, things like managing how enemies spawn in a map for adventure zones and wave based combat in the Arena. 
   - Sound Manager systems, handling fading music in and out for combat/ambience.
   - Setting up customized editor classes to assist designing the various systems such as skills and enemies
+  - Setting up object databases, that help us manage the many individual skills/items/enemies
+  - Setting up an object pooling system that splits up into categorizing for various object types
 
 - #### Multiplayer
-  - Setting up the player, enemies and all the bits in between for multiplayer. Syncing up skill projectiles, object spawning and handling scene switching while being in a group.
+  - Setting up the player, enemies and all the bits in between for multiplayer. Syncing up skill projectiles, object spawning and handling scene switching while being in a group
 
 - #### Client-Server communication
-  - Uploading required data so that players are able to continue their game at a later date, deserializing data so that it sets up the player to play the game.
+  - Uploading required data so that players are able to continue their game at a later date, deserializing data so that it sets up the player to play the game
 
 - #### Tool development
   - Setting up a debug command system, so we as the developers are able to test things easier
   - Setting up a server command system, so we're able to address any issues the player has based on their data, give players items/currency/experience
   - Setting up a way to define how an enemy works, from their attack skills, to what chance each attack types are used, to specific events that they can use based on various conditions, all setup in a designer friendly system
+
 - ### Optimization
   - Optimizing multiplayer netcode, this is through the use of passing in the bare bone information needed for objects, i.e. for projectiles passing in force value and start position to let the client handle the rest
   - Optimizing performance, essentially studying the profiler in various circumstances to understand what causes frame spikes and such, and adjusting changes needed
