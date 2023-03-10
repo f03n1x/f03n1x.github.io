@@ -10,7 +10,7 @@ I've been working on this game in my spare time, whenever I can, it gives me mot
 
 I decided that I wanted to learn how to put together a very basic website to show off the work I've done over the years, So I did just that! I'm using Jekyll which let me pick a premade template, from that I shuffling around a couple things and eventually we have this website! I learnt quite a bit about how websites work from this little experiment. 
 
-I am using the midnight theme <p><a href="https://github.com/pages-themes/midnight">Midnight Theme</a>.</p> made by <p><a href="https://twitter.com/mattgraham">Matt Graham</a>.</p>
+I am using the midnight theme <p><a href="https://github.com/pages-themes/midnight">Midnight Theme</a> </p> made by <p><a href="https://twitter.com/mattgraham">Matt Graham</a>.</p>
  
 
 ### Side Project Town Management VR Game [Unity3d]
