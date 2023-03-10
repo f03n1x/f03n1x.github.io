@@ -1,1 +1,0 @@
-{% include email_contact_panel.html %}

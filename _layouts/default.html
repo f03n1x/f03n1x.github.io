@@ -15,49 +15,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
-	.sidenav {
-	  height: 100%;
-	  width: 0;
-	  position: fixed;
-	  z-index: 1;
-	  top: 0;
-	  left: 0;
-	  background-color: #111;
-	  overflow-x: hidden;
-	  transition: 0.5s;
-	  padding-top: 60px;
+	.topnav {
+	  overflow: hidden;
+	  background-color: #333;
 	}
-
-	.sidenav a {
-	  padding: 8px 8px 8px 32px;
+	
+	.topnav a {
+	  float: left;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
 	  text-decoration: none;
-	  font-size: 25px;
-	  color: #818181;
-	  display: block;
-	  transition: 0.3s;
+	  font-size: 17px;
 	}
 
-	.sidenav a:hover {
-	  color: #f1f1f1;
-	}
-	
-	.sidenav .closebtn {
-	  position: absolute;
-	  top: 0;
-	  right: 25px;
-	  font-size: 36px;
-	  margin-left: 50px;
-	}
-	
-	.main {
-	  margin-left: 160px; /* Same as the width of the sidenav */
-	  font-size: 28px; /* Increased text to enable scrolling */
-	  padding: 0px 10px;
+	.topnav a:hover {
+	  background-color: #ddd;
+	  color: black;
 	}
 
-	@media screen and (max-height: 450px) {
-	  .sidenav {padding-top: 15px;}
-	  .sidenav a {font-size: 18px;}
+	.topnav a.active {
+	  background-color: #04AA6D;
+	  color: white;
 	}
 	.fa {
 	  padding: 20px;
@@ -96,16 +75,13 @@
 	</style>
   </head>
   <body>
-		<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			  <a href="/">About</a>
-			  <a href="/workexperience.html">Work Experience</a>
-			  <a href="/projects.html">Projects</a>
-			  <a href="/contact.html">Contact</a>
-			  <a href="Mark_Manson_2022_Resume.pdf">Resume</a>
+		<div class="topnav">
+		  <a href="/">About</a>
+		  <a href="/workexperience.html">Work Experience</a>
+		  <a href="/projects.html">Projects</a>
+		  <a href="Mark_Manson_2022_Resume.pdf">Resume</a>
 		</div>
-		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-		</div>
+		<br>
 		<div class="centerTop">
 		<h1>Mark's Portfolio</h1>
 		</div>
@@ -126,20 +102,6 @@
 			<a href="https://gitlab.com/f03n1x" class="fa fa-gitlab"></a>
         </div>
 	  </footer>
-
     </div>
-	<script>
-	function openNav() {
-	  document.getElementById("mySidenav").style.width = "250px";
-	  document.getElementById("main").style.marginLeft = "250px";
-	  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-	}
-
-	function closeNav() {
-	  document.getElementById("mySidenav").style.width = "0";
-	  document.getElementById("main").style.marginLeft= "0";
-	  document.body.style.backgroundColor = "white";
-	}
-	</script>
   </body>
 </html>

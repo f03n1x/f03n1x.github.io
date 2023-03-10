@@ -1,4 +1,4 @@
-## Projects
+# Projects
 
 ### Unannounced Project Phase Matrix [Unity3d]
 
@@ -13,7 +13,9 @@ I decided that I wanted to learn how to put together a very basic website to sho
 I also picked Jekyll since I was able to have Github handle all the in between of generating the website from the git repository. Howver aside from that Jekyll let's you setup a website and host it on your own pc, so you can see all your changes in real time, it definitely helped me a lot when designing the website.
 
 I am using the <a href="https://github.com/pages-themes/midnight">Midnight Theme</a> made by <a href="https://twitter.com/mattgraham">Matt Graham</a>
- 
+
+Art Assets:  
+<a href="https://www.cleanpng.com/png-new-zealand-computer-icons-silver-fern-aotearoa-fe-926848/download-png.html">Fern Icon</a> <a href="https://flaticons.net/custom.php?i=3RkivmFy3ABGtnIxInIX7IrEB2psy">Mail Icon</a>
 
 ### Side Project Town Management VR Game [Unity3d]
 
