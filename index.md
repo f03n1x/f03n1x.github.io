@@ -6,6 +6,6 @@ My first job in the software development world was working on a mobile app, I ha
 
 Most of my experience comes from job as a lead programmer at Unlit Games, where I handled quite a lot of the codebase. I also helped out any new programmers that worked with us, understand the systems we have in place and helped them get up to speed.
 
-I also spend my spare time working on a game with a group of friends, I'm the lead programmer for that project.]
+I also spend my spare time working on a game with a group of friends, I'm the lead programmer for that project.
 
 I really enjoy working on games!
