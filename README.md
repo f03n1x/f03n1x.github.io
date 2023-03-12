@@ -1,6 +1,6 @@
 # Welcome to My Portfolio!
 
-This is my github pages repository for my portfolio, you will most likely want to see the actual website rather than the repo, if that's what you're looking for, here is a link: https://www.f03n1x.github.io
+This is my github pages repository for my portfolio, you will most likely want to see the actual website rather than the repo, if that's what you're looking for, here is a link: https://f03n1x.github.io/
 
 I'm not a very experienced web developer so my code isn't the greatest, but it is a learning process and something I've grown interested in learning so I will try and improve it.
 
