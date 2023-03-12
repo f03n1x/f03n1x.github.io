@@ -4,10 +4,12 @@ youtubeId: 429lP0N91YM
 
 # Work Experience
 * * *
-<a href="https://store.steampowered.com/app/1117200/Redemptions_Guild/">Store Page</a>
 
 ### Lead Programmer at Unlit Games
-I worked with Unlit Games on Redemption's Guild, at first I was the only programmer, but as time passed I ended up becoming accustomed to the project and was able to help any new programmers that joined us, along with interviewing people for the job. I helped fix time sensitive bugs for the alpha, beta, early access and full release stages of the game.
+
+<a href="https://store.steampowered.com/app/1117200/Redemptions_Guild/">Redemption's Guild Store Page</a>
+
+I worked with Unlit Games on Redemption's Guild, at first I was the only programmer, but as time passed I ended up becoming accustomed to the project and was able to help any new programmers that joined us, along with also being a part of the interview process when hiring people. I helped fix time sensitive bugs for the alpha, beta, early access and full release stages of the game.
 
 This is some of the work I've done, I created the Loot collection and parry system:
 
