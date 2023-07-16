@@ -4,6 +4,17 @@ youtubeId: 429lP0N91YM
 
 # Work Experience
 * * *
+### Lead Developer for Caravanguard
+
+I'm currently working with a group of friends on a multiplayer action-rpg/roguelite called Caravanguard. The player's system is my pride and joy as a game developer, in the way that it feels fluid and concise. The system heavily involes the use of animations, which let me learn to setup everything revolving the animation event system. I spent a fair amount of time learning how the UI system works in unity since that was something I had not originally looked into, and out of that I was able to create all the UI that the player interacts with. 
+
+Some of the systems I've worked on:
+
+- Player Systems, this covers how they walk, attack, attack enemies, and interact with the world.
+- All the UI that the player interacts with has been built by me, in a split up MVC style design 
+- Player Input system, Caravanguard currently uses the new unity input system, which has let us setup keyboard + mouse and controller simultaneously
+- Multiplayer aspects in relation to the player, setting up which hero has been picked, syncing their attacks and animations and general handling of how the player's work in multiplayer
+- Custom inspector setup and editor tools
 
 ### Lead Programmer at Unlit Games
 

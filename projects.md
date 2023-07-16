@@ -1,11 +1,5 @@
 # Projects
 
-### Unannounced Project Phase Matrix [Unity3d]
-
-I'm currently working with a group of friends on a non-vr game. I've been given the role of lead developer and have handled majority of the game play features. The little detail I can give so far is that the game is a multiplayer rogue-like action rpg. The player's has a unique action system in which they can define their attacks and are able to combo into said attacks. The player's stats are from the equipment they have and the attacks they have selected.
-
-I've been working on this game in my spare time, whenever I can, it gives me motivation to learn new skills. I've so far ventured into learning about setting up UI in a concise way, along with general UI things I've never experimented before such as drag and drop inventory slots. I've also learnt to use Photon's new Fusion system for multiplayer.
-
 ### This website!
 
 I decided that I wanted to learn how to put together a very basic website to show off the work I've done over the years, So I did just that! I'm using Jekyll which let me pick a premade template, from that I shuffled around a couple things and eventually we have this website! I learnt quite a bit about how websites work from this little experimentm, and hopefully it will be useful in the future. 

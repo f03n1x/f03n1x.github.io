@@ -6,12 +6,15 @@ My first job in the software development world was working on a mobile app, I ha
 
 Most of my experience comes from my job as a lead programmer at Unlit Games, where I handled quite a lot of the codebase. I also helped out any new programmers that worked with us, understand the systems we have in place and helped them get up to speed and also did some non programmer things such as setting up some of the enemy animator controllers, the animations themselves, and even did some very basic animations in Unity3D.
 
-I also spend my spare time working on a game with a group of friends, I’m the lead programmer for that project.
+I spend my time currently working on a game called Caravanguard with a group of friends. I'm the lead developer for this project, and have worked on majority of the codebase, with a main focus on the player attacks, interactions and general systems that revolve around the player.
 
-I really enjoy working on games!
 <hr />
 
 # Work Experience
+
+### **Lead Developer for Caravanguard - 2+ Years of Experience**
+
+C# Programming | Multiplayer | Photon Fusion  | Gameplay | UI Programming | Tools
 
 ### **Lead Developer at Unlit Games - 5 Years of Experience**
 
@@ -22,14 +25,4 @@ C# Programming | Multiplayer | Photon Unity Network/PUN1 | VR | Gameplay | AI | 
 C# Programming | Multiplayer | Photon Unity Network/PUN2  | Gameplay | UI Programming
 
 <a href="/workexperience">Extra Details</a>
-
-<hr />
-
-# Projects
-
-### **Lead Developer at Unnannounced Project Phase Matrix**
-
-C# Programming | Multiplayer | Photon Fusion  | Gameplay | UI Programming
-
-<a href="/projects">Extra Details</a>
  
