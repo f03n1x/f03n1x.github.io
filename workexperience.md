@@ -6,7 +6,7 @@ youtubeId: 429lP0N91YM
 * * *
 ### Lead Developer for Caravanguard
 
-I'm currently working with a group of friends on a multiplayer action-rpg/roguelite called Caravanguard. The player's system is my pride and joy as a game developer, in the way that it feels fluid and concise. The system heavily involes the use of animations, which let me learn to setup everything revolving the animation event system. I spent a fair amount of time learning how the UI system works in unity since that was something I had not originally looked into, and out of that I was able to create all the UI that the player interacts with. 
+I'm currently working with a group of friends on a multiplayer action-rpg/roguelite called Caravanguard. The player's system is my pride and joy as a game developer, in the way that it feels fluid and concise. The system heavily involes the use of animations, which let me learn to setup everything revolving the animation event system. I spent a fair amount of time learning how the UI system works in Unity since that was something I had not originally looked into, and out of that I was able to create all the UI that the player interacts with. 
 
 Some of the systems I've worked on:
 
@@ -55,7 +55,7 @@ It's quite hard to breakdown everything I worked on because I worked on qutie a 
   - Setting up a server command system, so we're able to address any issues the player has based on their data, give players items/currency/experience
   - Setting up a way to define how an enemy works, from their attack skills, to what chance each attack types are used, to specific events that they can use based on various conditions, all setup in a designer friendly system
 
-- ### Optimisation
+- ### Optimization
   - Optimizing multiplayer netcode, this is through the use of passing in the bare bone information needed for objects, i.e. for projectiles passing in force value and start position to let the client handle the rest
   - Optimizing performance, essentially studying the profiler in various circumstances to understand what causes frame spikes and such, and adjusting changes needed
 
