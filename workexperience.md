@@ -1,5 +1,6 @@
 ---
-youtubeId: 429lP0N91YM
+youtubeId_RG: 429lP0N91YM
+youtubeId_CV: jCVudODvoX8
 ---
 
 # Work Experience
@@ -16,6 +17,10 @@ Some of the systems I've worked on:
 - Multiplayer aspects in relation to the player, setting up which hero has been picked, syncing their attacks and animations and general handling of how the player's work in multiplayer
 - Custom inspector setup and editor tools
 
+Here is a video showing some very early gameplay footage for the game, mostly around what the player can do (to show the work I've focused on):
+
+{% include youtubePlayer.html id=page.youtubeId_CV %}
+
 ### Lead Programmer at Unlit Games
 
 <a href="https://store.steampowered.com/app/1117200/Redemptions_Guild/">Redemption's Guild Store Page</a>
@@ -24,7 +29,7 @@ I worked with Unlit Games on Redemption's Guild, at first I was the only program
 
 This is some of the work I've done, I created the Loot collection and parry system:
 
-{% include youtubePlayer.html id=page.youtubeId %}
+{% include youtubePlayer.html id=page.youtubeId_RG %}
 
 It's quite hard to breakdown everything I worked on because I worked on qutie a lot of features, but I will try to keep the list brief:
 
