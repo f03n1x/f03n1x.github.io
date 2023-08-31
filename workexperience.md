@@ -14,7 +14,7 @@ Some of the systems I've worked on:
 
 Here is a video showing some very early gameplay footage for the game, mostly around what the player can do (to show the work I've focused on):
 
-<iframe width="720" height="540" src="https://www.youtube.com/embed/jCVudODvoX8?si=pgz_9r6CIfoLjlcY" frameborder="0"> </iframe>
+<iframe width="720" height="540" src="https://www.youtube.com/embed/jCVudODvoX8?si=70FIPFzfKuPHfTNV" frameborder="0"> </iframe>
 
 ### Lead Programmer at Unlit Games
 
