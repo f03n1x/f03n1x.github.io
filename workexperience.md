@@ -14,7 +14,7 @@ Some of the systems I've worked on:
 
 Here is a video showing some very early gameplay footage for the game, mostly around what the player can do (to show the work I've focused on):
 
-<iframe width="720" height="540" src="https://www.youtube.com/embed/jCVudODvoX8?si=70FIPFzfKuPHfTNV" frameborder="0"> </iframe>
+<iframe width="576" height="432" src="https://www.youtube.com/embed/jCVudODvoX8?si=70FIPFzfKuPHfTNV" frameborder="0"> </iframe>
 
 ### Lead Programmer at Unlit Games
 
@@ -24,7 +24,7 @@ I worked with Unlit Games on Redemption's Guild, at first I was the only program
 
 This is some of the work I've done, I created the Loot collection and parry system:
 
-<iframe width="720" height="540" src="https://www.youtube.com/embed/429lP0N91YM?si=ifi5Shmd6mgGPBhy" frameborder="0"> </iframe>
+<iframe width="576" height="432" src="https://www.youtube.com/embed/429lP0N91YM?si=ifi5Shmd6mgGPBhy" frameborder="0"> </iframe>
 
 It's quite hard to breakdown everything I worked on because I worked on qutie a lot of features, but I will try to keep the list brief:
 
