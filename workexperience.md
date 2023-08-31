@@ -1,8 +1,3 @@
----
-youtubeId_RG: 429lP0N91YM
-youtubeId_CV: jCVudODvoX8
----
-
 # Work Experience
 * * *
 ### Lead Developer for Caravanguard
@@ -19,7 +14,7 @@ Some of the systems I've worked on:
 
 Here is a video showing some very early gameplay footage for the game, mostly around what the player can do (to show the work I've focused on):
 
-{% include youtubePlayer.html id=page.youtubeId_CV %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jCVudODvoX8?si=pgz_9r6CIfoLjlcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Lead Programmer at Unlit Games
 
@@ -29,7 +24,7 @@ I worked with Unlit Games on Redemption's Guild, at first I was the only program
 
 This is some of the work I've done, I created the Loot collection and parry system:
 
-{% include youtubePlayer.html id=page.youtubeId_RG %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/429lP0N91YM?si=ifi5Shmd6mgGPBhy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 It's quite hard to breakdown everything I worked on because I worked on qutie a lot of features, but I will try to keep the list brief:
 
