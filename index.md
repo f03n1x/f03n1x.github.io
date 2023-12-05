@@ -12,7 +12,7 @@ I spend my time currently working on a game called Caravanguard with a group of 
 
 # Work Experience
 
-**Just an added note about my work experience, I've worked and still work with people in different timezones. Redemption's Guild included people with PST/PDT timezone. FabCom includes peoplew with EST/EDT timezone. Both of which are more than 14 hours difference from my own, so I'm definitely fine changing my sleep schedule to match that for any job!**
+**Just an added note about my work experience, I've worked and still work with people in different timezones. Redemption's Guild included people with PST/PDT timezone. FabCom includes people with EST/EDT timezone. Both of which are more than 14 hours difference from my own, so I'm definitely fine changing my sleep schedule to match that for any job!**
 
 ### **Lead Developer for Caravanguard - 2+ Years of Experience**
 
