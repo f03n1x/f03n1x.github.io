@@ -22,7 +22,7 @@ C# Programming | Multiplayer | Photon Fusion  | Gameplay | UI Programming | Tool
 
 C# Programming | Multiplayer | Photon Unity Network/PUN1 | VR | Gameplay | AI | Tools
 
-### **Senior Interactive Devloper at FabCom - 2+ Years of Experience**
+### **Senior Interactive Devloper at FabCom - 3+ Years of Experience**
 
 C# Programming | Multiplayer | Photon Unity Network/PUN2  | Gameplay | UI Programming
 
