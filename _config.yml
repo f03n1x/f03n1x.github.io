@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Mark's Portfolio
+title: Mark's Website
 
 repository: f03n1x/f03n1x.github.io
 

@@ -1,4 +1,4 @@
-# Welcome to My Portfolio!
+# Welcome to My Website!
 
 This is my github pages repository for my portfolio, you will most likely want to see the actual website rather than the repo, if that's what you're looking for, here is a link: https://f03n1x.github.io/
 
