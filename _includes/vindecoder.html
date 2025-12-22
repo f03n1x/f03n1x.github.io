@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	
+
+	<body bgcolor="#cecece">
+
+		<label for=fname>VIN Plate Decoder</label><br>
+		<!-- UBBBDML465541NABBAU-KJ-184-A- Is the code shown on the vinplate my summer car website -->
+		<p>VIN Code: <input type="text" id="vincode" value="UBBBDML465541NABBAU-KJ-184-A-" style="width:215px"></p>
+	
+		<button onclick="decodeVin()">Decode VIN!</button>
+		
+		<ul id="decodedVIN">
+		</ul>
+		
+		</div>
+		
+		<script>
+		
+		function decodeVin()
+		{
+			const country = ["Corris Britain"];
+			const countryCode = ["U"];
+			const assemblyPlant = ["Dagenham", "Manchester", "Saarlouus", "Rheine"];
+			const assmblyPlantCode = ["A", "B", "C", "K"];
+			const model = ["Rivett"];
+			const modelCode = ["B"];
+			const bodyType = ["2D Pilared Sedan"];
+			const bodyTypeCode = ["B"];
+			const version = ["L", "LX", "SLX", "GT"];
+			const versionCode = ["D", "E", "G", "B"];
+			const year = ["1971", "1972", "1973", "1974 (Facelift)","1975", "1976"];
+			const yearCode = ["L", "M", "N", "P","R", "S"];
+			const month = ["01", "02", "03", "04", "05", "06", "07", "08", "09","10", "11", "12"];
+			const monthCode = ["C", "K", "D", "E", "L", "Y", "S", "T", "J","U", "M", "P"];
+			const drive = ["RWD"];
+			const driveCode = ["1"]
+			const engine = ["Standard 2.0", "High Performance 2.0"];
+			const engineCode = ["NA", "NE"];
+			const gearbox = ["3-spd Automatic", "4-spd Manual"];
+			const gearboxCode = ["7", "B"]
+			const axleRatio = ["3.44", "3.75", "3.89", "4.11", "4.44"];
+			const axleRatioCode = ["S", "B", "C", "N", "E"];
+			const axleLock = ["Open", "LSD"];
+			const axleLockCode = ["A", "B"];
+			const bodyColour = ["Dark Grey", "Nature White", "Sand", "Asphalt Grey", "Blue", "Sun Yellow", "Dark Navy", "Royal Red", "Brown", "Red", "Electric Green", "White Pearl", "Spring Green", "Purple", "Yellow", "Sky Blue", "Orange", "Navy Blue", "Special"];
+			const bodyColourCode = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "R", "T", "U", "V", "X", "Y"];
+			const vinylRoof = ["Paint", "Black", "White", "Tan", "Blue", "Dark Brown"];
+			const vinylRoofCode = ["-", "A", "B", "C", "K", "M"];
+			const interiorTrim = ["Red", "Black", "Tan", "Blue", "Special"];
+			const interiorTrimCode = ["N", "A", "K", "F", "Y"];
+			const radio = ["Radio delete", "Radio"];
+			const radioCode = ["-", "J"]
+			const instrumentPanel = ["Standard", "Clock", "Tachometer"];
+			const instrumentPanelCode = ["-", "G", "M"];
+			const windShield = ["Clear", "Tinted", "Sunstrip"];
+			const windShieldCode = ["1", "2", "F"];
+			const seats = ["Standard", "Bucket Style"];
+			const seatsCode = ["8", "B"];
+			const suspension = ["Standard", "Standard + Stiffened", "Lowered", "Lowered + Stiffened"];
+			const suspensionCode = ["A", "B", "4", "M"]
+			const brakes = ["Standard", "Power Brakes"];
+			const brakesCode = ["-", "B"];
+			const wheels = ["13\" Steel", "13\" Steel", "14 \" Sport", "14 \" Steel / 14 \" Octo"];
+			const wheelsCode = ["A", "B", "4", "M"];
+			const rearWindow = ["Standard", "Heated", "Standard + Window Grille"];
+			const rearWindowCode = ["-", "B", "M"];
+			
+			var vinCode = document.getElementById("vincode").value;
+			var vinCodeString = vinCode.toString();
+			
+			document.getElementById("decodedVIN").innerHTML = ""
+			
+			var countryResultStr = "1. Country: " + checkCode(countryCode, country, vinCodeString[0]);//1
+			appendResult(countryResultStr.toString());
+			var assemblyResultStr = "2. Assembly: " + checkCode(assmblyPlantCode, assemblyPlant, vinCodeString[1]);//2
+			appendResult(assemblyResultStr.toString());
+			var modelResultStr = "3. Model: " + checkCode(modelCode, model, vinCodeString[2]);//3
+			appendResult(modelResultStr.toString());
+			var bodyTypeResultStr = "4. Body Type: " + checkCode(bodyTypeCode, bodyType, vinCodeString[3]);//4
+			appendResult(bodyTypeResultStr.toString());
+			var versionCodeResultStr = "5. Version Code: " + checkCode(versionCode, version, vinCodeString[4]);//5
+			appendResult(versionCodeResultStr.toString());
+			var yearCodeResultStr = "6. Year Code: " + checkCode(yearCode, year, vinCodeString[5]);//6
+			appendResult(yearCodeResultStr.toString());
+			var monthCodeResultStr = "7. Month Code: " + checkCode(monthCode, month, vinCodeString[6]);//7
+			appendResult(monthCodeResultStr.toString());
+			var driveCodeResultStr = "9. Drive Code: " + checkCode(driveCode, drive, vinCodeString[12]);//9
+			appendResult(driveCodeResultStr.toString());
+			var engineCodeResultStr = "10. Engine Code: " + checkCode(engineCode, engine, vinCodeString.substring(13, 15));//10
+			appendResult(engineCodeResultStr.toString());
+			var gearboxResultStr = "11. Gearbox: " + checkCode(gearboxCode, gearbox, vinCodeString[15]);//11
+			appendResult(gearboxResultStr.toString());
+			var axleRatioResultStr = "12. Axle Ratio: " + checkCode(axleRatioCode, axleRatio, vinCodeString[16]);//12
+			appendResult(axleRatioResultStr.toString());
+			var axleLockResultStr = "13. Axle Lock: " + checkCode(axleLockCode, axleLock, vinCodeString[17]);//13
+			appendResult(axleLockResultStr.toString());
+			var bodyColourResultStr = "14. Body Colour: " + checkCode(bodyColourCode, bodyColour, vinCodeString[18]);//14
+			appendResult(bodyColourResultStr.toString());
+			var vinylRoofResultStr = "15. Vinyl Roof: " + checkCode(vinylRoofCode, vinylRoof, vinCodeString[19]);//15
+			appendResult(vinylRoofResultStr.toString());
+			var interiorTrimResultStr = "16. Interior Trim: " + checkCode(interiorTrimCode, interiorTrim, vinCodeString[20]);//16
+			appendResult(interiorTrimResultStr.toString());
+			var radioResultStr = "17. Radio: " + checkCode(radioCode, radio, vinCodeString[21]);//17
+			appendResult(radioResultStr.toString());
+			var instrumentPanelResultStr = "18. Instrument Panel: " + checkCode(instrumentPanelCode, instrumentPanel, vinCodeString[22]);//18
+			appendResult(instrumentPanelResultStr.toString());
+			var windShieldResultStr = "19. Windshield: " + checkCode(windShieldCode, windShield, vinCodeString[23]);//19
+			appendResult(windShieldResultStr.toString());
+			var seatsResultStr = "20. Seats: " + checkCode(seatsCode, seats, vinCodeString[24]);//20
+			appendResult(seatsResultStr.toString());
+			var suspensionResultStr = "21. Suspension: " + checkCode(suspensionCode, suspension, vinCodeString[25]);//21
+			appendResult(suspensionResultStr.toString());
+			var brakesResultStr = "22. Brakes: " + checkCode(brakesCode, brakes, vinCodeString[26]);//22
+			appendResult(brakesResultStr.toString());
+			var wheelsResultStr = "23. Wheels: " + checkCode(wheelsCode, wheels, vinCodeString[27]);//23
+			appendResult(wheelsResultStr.toString());
+			var rearWindowResultStr = "24. Rear Window: " + checkCode(rearWindowCode, rearWindow, vinCodeString[28]);//24
+			appendResult(rearWindowResultStr.toString());
+		}
+		function appendResult(result)
+		{
+			const element = document.createElement("li");
+			const resultTextNode = document.createTextNode(result.toString());
+			element.appendChild(resultTextNode);
+			document.getElementById("decodedVIN").appendChild(element);
+		}
+		
+		
+		function checkCode(code, result, input)
+		{
+			for (let i = 0; i < code.length; i++) 
+			{
+				if(input == code[i])
+				{
+					return result[i];
+				}
+			}
+		}
+		
+		</script>
+
+	</body>
+</html>
