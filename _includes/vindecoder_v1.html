@@ -2,39 +2,15 @@
 	<body bgcolor="#cecece">
 	<hr>
 		<p>Type in the Vin code to see what type of Corris Rivett you got!</p>
-		<label>Want the original?</label>
-		<a href="/vindecoder_v1">MWC Vin Decoder</a>
-		<img src="/assets/images/example_vin.png" alt="The very first vin plate I got on my first My Winter Car playthrough">
-		<label>VIN Decode V2</label>
+		 <img src="/assets/images/example_vin.png" alt="The very first vin plate I got on my first My Winter Car playthrough">
+			<label>VIN Decode V1</label>
 			<hr>
-				<p style="font-size:120%;">Type | Version | Vehicle No.</p>
-			<div style="padding: 15px;">
-				<input type="text" id="vin_type" value="GG" maxlength="2" style="width:32px">
-				<label style="padding: 8px;">&nbsp;</label>
-				<input type="text" id="vin_version" value="G" maxlength="1" style="width:16px">
-				<label style="padding: 8px;">&nbsp;&nbsp;</label>
-				<input type="text" id="vin_vehicleNo" value="UBBBDML46554" maxlength="12" style="width:110px">
-			</div>
-			<p style="font-size:120%;">Drive | Engine | Trans. | Axle | Colour | Trim</p>
-			<div style="padding: 15px;">
-				<input type="text" id="vin_drive" value="1" maxlength="1" style="width:16px">
-				<label style="padding: 4px;">&nbsp;&nbsp;</label>
-				<input type="text" id="vin_engine" value="NA" maxlength="2" style="width:32px">
-				<label style="padding: 4px;">&nbsp;&nbsp;</label>
-				<input type="text" id="vin_trans" value="B" maxlength="1" style="width:16px">
-				<label style="padding: 4px;">&nbsp;&nbsp;</label>
-				<input type="text" id="vin_axle" value="BA" maxlength="2" style="width:30px">
-				<label style="padding: 4px;">&nbsp;&nbsp;</label>
-				<input type="text" id="vin_colour" value="U-" maxlength="2" style="width:30px">
-				<label style="padding: 8px;">&nbsp;&nbsp;</label>
-				<input type="text" id="vin_trim" value="K" maxlength="1" style="width:16px">
-			</div>
-				<p style="font-size:120%;">L.D.O</p>
-			<div style="padding: 15px;">
-				<input type="text" id="vin_ldo" value="J-184-A-" maxlength="8" style="width:64px padding: 15px;">
-			</div>
-			<button onclick="decodeVin(vin_vehicleNo, decodedVIN_type2)">Decode VIN!</button>
-			<ul id="decodedVIN_type2"></ul>
+			<br>
+			<label> DOES NOT USE TYPE OR VERSION</label>
+			<!-- UBBBDML465541NABBAU-KJ-184-A- Is the code shown on the vinplate my winter car website -->
+			<p>VIN Code: <input type="text" id="vincode" value="UBBBDML465541NABBAU-KJ-184-A-" style="width:220px" maxlength="29"></p>
+			<button onclick="decodeVin(vincode, decodedVIN_type1)">Decode VIN!</button>
+			<ul id="decodedVIN_type1"></ul>
 	<script>
 		
 		function combineVinCode()
