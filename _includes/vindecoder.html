@@ -1,21 +1,5 @@
 <html>
-	<style>
-		* {
-		  box-sizing: border-box;
-		}
-		.column {
-		  float: left;
-		  width: 50%;
-		  padding: 10px;
-		  height: 300px; /* Should be removed. Only for demonstration */
-		}
-		.row:after {
-		  content: "";
-		  display: table;
-		  clear: both;
-		}
-	</style>
-
+	
 
 	<body bgcolor="#cecece">
 				
@@ -23,74 +7,17 @@
 		
 		 <img src="/assets/images/example_vin.png" alt="The very first vin plate I got on my first My Winter Car playthrough">
 		
-		<div class="row">
-			<div class="column">
-				<label>VIN Decode V1</label>
-				<br>
-				<label> DOES NOT USE TYPE OR VERSION</label>
-				<!-- UBBBDML465541NABBAU-KJ-184-A- Is the code shown on the vinplate my winter car website -->
-				<p>VIN Code: <input type="text" id="vincode" value="UBBBDML465541NABBAU-KJ-184-A-" style="width:220px" maxlength="29"></p>
-				<button onclick="decodeVin(vincode, decodedVIN_type1)">Decode VIN!</button>
-				<ul id="decodedVIN_type1">
-				
-				</ul>
-			</div>
-
-			<div class="column">
-				<label>VIN Decode V2</label>
-					<p style="font-size:120%;">Type | Version | Vehicle No.</p>
-				<div style="padding: 15px; ">
-					<input type="text" id="vin_type" value="GG" maxlength="2" style=width:32px>
-					<label style="padding: 8px;">&nbsp;</label>
-					<input type="text" id="vin_version" value="G" maxlength="1" style=width:16px>
-					<label style="padding: 8px;">&nbsp;&nbsp;</label>
-					<input type="text" id="vin_vehicleNo" value="UBBBDML46554" maxlength="12" style=width:110px>
-				</div>
-					<p style="font-size:120%;">Drive | Engine | Trans. | Axle | Colour | Trim</p>
-				<div style="padding: 15px;">
-					<input type="text" id="vin_drive" value="1" maxlength="1" style=width:16px>
-					<label style="padding: 8px;">&nbsp;</label>
-					<input type="text" id="vin_engine" value="NA" maxlength="2" style=width:32px>
-					<label style="padding: 16px;">&nbsp;</label>
-					<input type="text" id="vin_trans" value="B" maxlength="1" style=width:16px>
-					<label style="padding: 12px;">&nbsp;&nbsp;</label>
-					<input type="text" id="vin_axle" value="BA" maxlength="2" style=width:32px>
-					<label style="padding: 4px;">&nbsp;&nbsp;</label>
-					<input type="text" id="vin_colour" value="U-" maxlength="2" style=width:32px>
-					<label style="padding: 8px;">&nbsp;&nbsp;</label>
-					<input type="text" id="vin_trim" value="K" maxlength="1" style=width:16px>
-				</div>
-					<p style="font-size:120%;">L.D.O</p>
-				<div style="padding: 15px; ">
-					<input type="text" id="vin_ldo" value="J-184-A-" maxlength="8" style=width:64px>
-				</div>
-				<button onclick="decodeVin(vin_vehicleNo, decodedVIN_type2)">Decode VIN!</button>
-				<ul id="decodedVIN_type2">
-				</ul>
-			</div>
-		</div>
+		<!-- UBBBDML465541NABBAU-KJ-184-A- Is the code shown on the vinplate my summer car website -->
+		<p>VIN Code: <input type="text" id="vincode" value="UBBBDML465541NABBAU-KJ-184-A-" style="width:215px"></p>
+	
+		<button onclick="decodeVin()">Decode VIN!</button>
 		
-			
-		
-		
-		
+		<ul id="decodedVIN">
+		</ul>
 		
 		<script>
 		
-		function combineVinCode()
-		{
-			var combinedVinCode = document.getElementById("vin_vehicleNo").value 
-				+ document.getElementById("vin_drive").value 
-				+ document.getElementById("vin_engine").value 
-				+ document.getElementById("vin_trans").value 
-				+ document.getElementById("vin_axle").value 
-				+ document.getElementById("vin_colour").value
-				+ document.getElementById("vin_trim").value
-				+ document.getElementById("vin_ldo").value;
-			return combinedVinCode;
-		}
-		
-		function decodeVin(vincode_input_id, vincode_result_id)
+		function decodeVin()
 		{
 			const country = ["Corris Britain"];
 			const countryCode = ["U"];
@@ -139,73 +66,66 @@
 			const rearWindow = ["Standard", "Heated", "Standard + Window Grille"];
 			const rearWindowCode = ["-", "B", "M"];
 			
-			var vinCode = document.getElementById(vincode_input_id.id).value;
-			if(vincode_input_id.id == "vin_vehicleNo")
-			{
-				vinCode = combineVinCode();
-			}
+			var vinCode = document.getElementById("vincode").value;
 			var vinCodeString = vinCode.toString();
-			document.getElementById(vincode_result_id.id).innerHTML = ""
-			if(vincode_input_id.id == "vin_vehicleNo")
-			{
-				appendResult("Type: "+document.getElementById("vin_type").value.toString(), vincode_result_id);
-				appendResult("Version: "+document.getElementById("vin_version").value.toString(), vincode_result_id);
-			}
+			
+			document.getElementById("decodedVIN").innerHTML = ""
+			
 			var countryResultStr = "1. Country: " + checkCode(countryCode, country, vinCodeString[0]);//1
-			appendResult(countryResultStr.toString(), vincode_result_id);
+			appendResult(countryResultStr.toString());
 			var assemblyResultStr = "2. Assembly: " + checkCode(assmblyPlantCode, assemblyPlant, vinCodeString[1]);//2
-			appendResult(assemblyResultStr.toString(), vincode_result_id);
+			appendResult(assemblyResultStr.toString());
 			var modelResultStr = "3. Model: " + checkCode(modelCode, model, vinCodeString[2]);//3
-			appendResult(modelResultStr.toString(), vincode_result_id);
+			appendResult(modelResultStr.toString());
 			var bodyTypeResultStr = "4. Body Type: " + checkCode(bodyTypeCode, bodyType, vinCodeString[3]);//4
-			appendResult(bodyTypeResultStr.toString(), vincode_result_id);
+			appendResult(bodyTypeResultStr.toString());
 			var versionCodeResultStr = "5. Version Code: " + checkCode(versionCode, version, vinCodeString[4]);//5
-			appendResult(versionCodeResultStr.toString(), vincode_result_id);
+			appendResult(versionCodeResultStr.toString());
 			var yearCodeResultStr = "6. Year Code: " + checkCode(yearCode, year, vinCodeString[5]);//6
-			appendResult(yearCodeResultStr.toString(), vincode_result_id);
+			appendResult(yearCodeResultStr.toString());
 			var monthCodeResultStr = "7. Month Code: " + checkCode(monthCode, month, vinCodeString[6]);//7
-			appendResult(monthCodeResultStr.toString(), vincode_result_id);
+			appendResult(monthCodeResultStr.toString());
 			var serialNumber = "8. Serial Number: " + vinCodeString.substring(7, 11);//8
-			appendResult(serialNumber.toString(), vincode_result_id);
+			appendResult(serialNumber.toString());
 			var driveCodeResultStr = "9. Drive Code: " + checkCode(driveCode, drive, vinCodeString[12]);//9
-			appendResult(driveCodeResultStr.toString(), vincode_result_id);
+			appendResult(driveCodeResultStr.toString());
 			var engineCodeResultStr = "10. Engine Code: " + checkCode(engineCode, engine, vinCodeString.substring(13, 15));//10
-			appendResult(engineCodeResultStr.toString(), vincode_result_id);
+			appendResult(engineCodeResultStr.toString());
 			var gearboxResultStr = "11. Gearbox: " + checkCode(gearboxCode, gearbox, vinCodeString[15]);//11
-			appendResult(gearboxResultStr.toString(), vincode_result_id);
+			appendResult(gearboxResultStr.toString());
 			var axleRatioResultStr = "12. Axle Ratio: " + checkCode(axleRatioCode, axleRatio, vinCodeString[16]);//12
-			appendResult(axleRatioResultStr.toString(), vincode_result_id);
+			appendResult(axleRatioResultStr.toString());
 			var axleLockResultStr = "13. Axle Lock: " + checkCode(axleLockCode, axleLock, vinCodeString[17]);//13
-			appendResult(axleLockResultStr.toString(), vincode_result_id);
+			appendResult(axleLockResultStr.toString());
 			var bodyColourResultStr = "14. Body Colour: " + checkCode(bodyColourCode, bodyColour, vinCodeString[18]);//14
-			appendResult(bodyColourResultStr.toString(), vincode_result_id);
+			appendResult(bodyColourResultStr.toString());
 			var vinylRoofResultStr = "15. Vinyl Roof: " + checkCode(vinylRoofCode, vinylRoof, vinCodeString[19]);//15
-			appendResult(vinylRoofResultStr.toString(), vincode_result_id);
+			appendResult(vinylRoofResultStr.toString());
 			var interiorTrimResultStr = "16. Interior Trim: " + checkCode(interiorTrimCode, interiorTrim, vinCodeString[20]);//16
-			appendResult(interiorTrimResultStr.toString(), vincode_result_id);
+			appendResult(interiorTrimResultStr.toString());
 			var radioResultStr = "17. Radio: " + checkCode(radioCode, radio, vinCodeString[21]);//17
-			appendResult(radioResultStr.toString(), vincode_result_id);
+			appendResult(radioResultStr.toString());
 			var instrumentPanelResultStr = "18. Instrument Panel: " + checkCode(instrumentPanelCode, instrumentPanel, vinCodeString[22]);//18
-			appendResult(instrumentPanelResultStr.toString(), vincode_result_id);
+			appendResult(instrumentPanelResultStr.toString());
 			var windShieldResultStr = "19. Windshield: " + checkCode(windShieldCode, windShield, vinCodeString[23]);//19
-			appendResult(windShieldResultStr.toString(), vincode_result_id);
+			appendResult(windShieldResultStr.toString());
 			var seatsResultStr = "20. Seats: " + checkCode(seatsCode, seats, vinCodeString[24]);//20
-			appendResult(seatsResultStr.toString(), vincode_result_id);
+			appendResult(seatsResultStr.toString());
 			var suspensionResultStr = "21. Suspension: " + checkCode(suspensionCode, suspension, vinCodeString[25]);//21
-			appendResult(suspensionResultStr.toString(), vincode_result_id);
+			appendResult(suspensionResultStr.toString());
 			var brakesResultStr = "22. Brakes: " + checkCode(brakesCode, brakes, vinCodeString[26]);//22
-			appendResult(brakesResultStr.toString(), vincode_result_id);
+			appendResult(brakesResultStr.toString());
 			var wheelsResultStr = "23. Wheels: " + checkCode(wheelsCode, wheels, vinCodeString[27]);//23
-			appendResult(wheelsResultStr.toString(), vincode_result_id);
+			appendResult(wheelsResultStr.toString());
 			var rearWindowResultStr = "24. Rear Window: " + checkCode(rearWindowCode, rearWindow, vinCodeString[28]);//24
-			appendResult(rearWindowResultStr.toString(), vincode_result_id);
+			appendResult(rearWindowResultStr.toString());
 		}
-		function appendResult(result, vincode_result_id)
+		function appendResult(result)
 		{
 			const element = document.createElement("li");
 			const resultTextNode = document.createTextNode(result.toString());
 			element.appendChild(resultTextNode);
-			document.getElementById(vincode_result_id.id).appendChild(element);
+			document.getElementById("decodedVIN").appendChild(element);
 		}
 		
 		
