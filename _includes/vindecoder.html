@@ -2,7 +2,11 @@
 	
 
 	<body bgcolor="#cecece">
-
+				
+		<p>Type in the Vin code to see what type of Corris Rivett you got!</p>
+		
+		 <img src="/assets/images/example_vin.png" alt="The very first vin plate I got on my first My Winter Car playthrough">
+		
 		<!-- UBBBDML465541NABBAU-KJ-184-A- Is the code shown on the vinplate my summer car website -->
 		<p>VIN Code: <input type="text" id="vincode" value="UBBBDML465541NABBAU-KJ-184-A-" style="width:215px"></p>
 	
@@ -81,6 +85,8 @@
 			appendResult(yearCodeResultStr.toString());
 			var monthCodeResultStr = "7. Month Code: " + checkCode(monthCode, month, vinCodeString[6]);//7
 			appendResult(monthCodeResultStr.toString());
+			var serialNumber = "8. Serial Number: " + vinCodeString.substring(7, 11);//8
+			appendResult(serialNumber.toString());
 			var driveCodeResultStr = "9. Drive Code: " + checkCode(driveCode, drive, vinCodeString[12]);//9
 			appendResult(driveCodeResultStr.toString());
 			var engineCodeResultStr = "10. Engine Code: " + checkCode(engineCode, engine, vinCodeString.substring(13, 15));//10
