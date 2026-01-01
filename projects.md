@@ -1,5 +1,14 @@
 # Projects
 
+### Vin Decoder
+
+Just something I did one day when someone on the my winter car discussion board was talking about getting their ideal Vin plate, and with Toplessgun adding the table, I felt like it was something doable even with my low-calibre knowledge of html. I ended up spending an afternoon on it, learning javascript during the process. Not a fan of javascript but eh it works (personally a fan of programming languages that generally specify data types). 
+
+I've been checking up on the hits from plausible (a site I used mostly to check if companies I applied to actually visited my website) and it's staggering how many people visit without really any advertisement, aside from twice on the discussion board. Really goes to show that word of mouth is really the best way to advertise things. 
+
+Someone asked for a more in-line version close to the vin plate, and I ended up making it a few hours before the new year haha, and seems to do well, I wanted to keep the original just because I personally am used to it now and it seems that it was a good idea, some people jump back to it. Added fireworks for the new year, but took them away, just wait until chinese new year for them to make a return visit!
+
+
 ### This website!
 
 I decided that I wanted to learn how to put together a very basic website to show off the work I've done over the years, So I did just that! I'm using Jekyll which let me pick a premade template, from that I shuffled around a couple things and eventually we have this website! I learnt quite a bit about how websites work from this little experimentm, and hopefully it will be useful in the future. 
