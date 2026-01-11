@@ -1,5 +1,10 @@
+<br>
+<div class="centerTop">
+<h1>Mark's Website</h1>
+</div>
+
 #### Mark Manson | <img src="/assets/images/fern.png" width="20" height="20"> Auckland, New Zealand | <img src="/assets/images/Message-Mail-256.png" width="20" height="20"> mark.manson.work@gmail.com  | +642102204595
-<hr />
+<hr/>
 I’m Mark Manson, A VR/Game Developer with over 5 years of experience. I’m an avid gamer, programmer and love to work on games!
 
 My first job in the software development world was working on a mobile app, I handled developing the app for Android and iOS in separate programming languages, talking to the project manager, doing the design, testing the app on both platforms and then upload it to the google play/app store.
@@ -8,7 +13,7 @@ Most of my experience comes from my job as a lead programmer at Unlit Games, whe
 
 I spend my time currently working on a game called Caravanguard with a group of friends. I'm the lead developer for this project, and have worked on majority of the codebase, with a main focus on the player attacks, interactions and general systems that revolve around the player.
 
-<hr />
+<hr/>
 
 # Work Experience
 

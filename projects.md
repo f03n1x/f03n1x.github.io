@@ -1,5 +1,8 @@
-# Projects
-
+<br>
+<h2 style="text-align: center;">
+Projects
+</h2>
+***
 ### Vin Decoder
 
 Just something I did one day when someone on the my winter car discussion board was talking about getting their ideal Vin plate, and with Toplessgun adding the table, I felt like it was something doable even with my low-calibre knowledge of html. I ended up spending an afternoon on it, learning javascript during the process. Not a fan of javascript but eh it works (personally a fan of programming languages that generally specify data types). 

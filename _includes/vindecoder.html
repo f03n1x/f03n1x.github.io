@@ -4,17 +4,17 @@
 			<label>Want the original?</label>
 			<a href="/vindecoder_v1">MWC Vin Decoder</a>
 		</p>
-		 <br>
 		 <hr>
-		<p style="text-align: center; font-size:150%;">VIN Decode V2</p>
+		<p style="text-align: center; font-size:150%;">VIN Decode V2.5</p>
 		<p style="text-align: center;">Type in the Vin code to see what type of Corris Rivett you got!</p>
+		<p style="text-align: center;">Now Decodes while you type!</p>
 		<div class="outerBlock">
 			<div class="outerVin">
 				<div class="centreVin">
 					<p style="font-size:120%;" style="padiding:30px;">Type | Version | Vehicle No.</p>
-					<input type="text" id="vin_type" value="GG" maxlength="2" style="width:32px">
+					<input type="text" id="vin_type" value="BB" maxlength="2" style="width:32px">
 					<label style="padding: 8px;">&nbsp;</label>
-					<input type="text" id="vin_version" value="G" maxlength="1" style="width:16px">
+					<input type="text" id="vin_version" value="D" maxlength="1" style="width:16px">
 					<label style="padding: 4px;">&nbsp;&nbsp;</label>
 					<input type="text" id="vin_vehicleNo" value="UBBBDML46554" maxlength="12" style="width:110px">
 				</div>
@@ -34,31 +34,43 @@
 				</div>
 				<div class="centreVin">
 					<p style="font-size:120%;">L.D.O</p>
-					<input type="text" id="vin_ldo" value="J-184-A-" maxlength="8" style="width:64px padding: 15px;">
+					<input type="text" class="vinId" id="vin_ldo" value="J-184-A-" maxlength="8" style="width:64px padding: 15px;">
 				</div>
 			</div>
 			</div>
+			<ul id="decodedVIN" class="listjustify">
+			</ul>
 			<p style="text-align: center;">
-				<button onclick="decodeVin(vin_vehicleNo, decodedVIN)">Decode VIN!</button>
+				<label id="vinplateprefix"> VIN Plate Code: </label>
+				<br>
+				<label id="vinplatestr"> </label>
 			</p>
-			<ul id="decodedVIN" class="listjustify"></ul>
 	<script>
 		
-		function combineVinCode()
-		{
-			var combinedVinCode = document.getElementById("vin_vehicleNo").value 
-				+ document.getElementById("vin_drive").value 
-				+ document.getElementById("vin_engine").value 
-				+ document.getElementById("vin_trans").value 
-				+ document.getElementById("vin_axle").value 
-				+ document.getElementById("vin_colour").value
-				+ document.getElementById("vin_trim").value
-				+ document.getElementById("vin_ldo").value;
-			return combinedVinCode;
-		}
+		const vinVehicleNo = document.getElementById("vin_vehicleNo");
+		const vinDrive = document.getElementById("vin_drive");
+		const vinEngine = document.getElementById("vin_engine");
+		const vinTrans = document.getElementById("vin_trans");
+		const vinAxle = document.getElementById("vin_axle");
+		const vinColour = document.getElementById("vin_colour");
+		const vinTrim = document.getElementById("vin_trim");
+		const vinLDO = document.getElementById("vin_ldo");
 		
-		function decodeVin(vincode_input_id, vincode_result_id)
+		document.getElementById("vin_vehicleNo").addEventListener("input", decodeVin);
+		document.getElementById("vin_drive").addEventListener("input", decodeVin);
+		document.getElementById("vin_engine").addEventListener("input", decodeVin);
+		document.getElementById("vin_trans").addEventListener("input", decodeVin);
+		document.getElementById("vin_axle").addEventListener("input", decodeVin);
+		document.getElementById("vin_colour").addEventListener("input", decodeVin);
+		document.getElementById("vin_trim").addEventListener("input", decodeVin);
+		document.getElementById("vin_ldo").addEventListener("input", decodeVin);
+		
+		window.addEventListener("load",decodeVin);
+		inputFocusHandler();
+		function decodeVin()
 		{
+			//Fugly const arrays for the vin code stuff, My Excuse: New to javascript lol
+			const vincode_result_id = document.getElementById("decodedVIN");
 			const country = ["Corris Britain"];
 			const countryCode = ["U"];
 			const assemblyPlant = ["Dagenham", "Manchester", "Saarlouus", "Rheine"];
@@ -106,87 +118,164 @@
 			const rearWindow = ["Standard", "Heated", "Standard + Window Grille"];
 			const rearWindowCode = ["-", "B", "M"];
 			
-			var vinCode = document.getElementById(vincode_input_id.id).value;
-			if(vincode_input_id.id == "vin_vehicleNo")
-			{
-				vinCode = combineVinCode();
-			}
-			var vinCodeString = vinCode.toString();
-			document.getElementById(vincode_result_id.id).innerHTML = ""
-			if(vincode_input_id.id == "vin_vehicleNo")
-			{
-				appendResult("Type: "+document.getElementById("vin_type").value.toString(), vincode_result_id);
-				appendResult("Version: "+document.getElementById("vin_version").value.toString(), vincode_result_id);
-			}
-			var countryResultStr = "1. Country: " + checkCode(countryCode, country, vinCodeString[0]);//1
+			document.getElementById(vincode_result_id.id).innerHTML = "";
+			
+			appendResult("Type: "+document.getElementById("vin_type").value.toString(), vincode_result_id);
+			appendResult("Version: "+document.getElementById("vin_version").value.toString(), vincode_result_id);	
+			
+			//Using the 1st input
+			var vinVehicleNoStr = vinVehicleNo.value.toString();
+			var countryResultStr = "1. Country: " + checkCode(countryCode, country, vinVehicleNoStr[0]);//1
 			appendResult(countryResultStr.toString(), vincode_result_id);
-			var assemblyResultStr = "2. Assembly: " + checkCode(assmblyPlantCode, assemblyPlant, vinCodeString[1]);//2
+			var assemblyResultStr = "2. Assembly: " + checkCode(assmblyPlantCode, assemblyPlant, vinVehicleNoStr[1]);//2
 			appendResult(assemblyResultStr.toString(), vincode_result_id);
-			var modelResultStr = "3. Model: " + checkCode(modelCode, model, vinCodeString[2]);//3
+			var modelResultStr = "3. Model: " + checkCode(modelCode, model, vinVehicleNoStr[2]);//3
 			appendResult(modelResultStr.toString(), vincode_result_id);
-			var bodyTypeResultStr = "4. Body Type: " + checkCode(bodyTypeCode, bodyType, vinCodeString[3]);//4
+			var bodyTypeResultStr = "4. Body Type: " + checkCode(bodyTypeCode, bodyType, vinVehicleNoStr[3]);//4
 			appendResult(bodyTypeResultStr.toString(), vincode_result_id);
-			var versionCodeResultStr = "5. Version Code: " + checkCode(versionCode, version, vinCodeString[4]);//5
+			var versionCodeResultStr = "5. Version Code: " + checkCode(versionCode, version, vinVehicleNoStr[4]);//5
 			appendResult(versionCodeResultStr.toString(), vincode_result_id);
-			var yearCodeResultStr = "6. Year Code: " + checkCode(yearCode, year, vinCodeString[5]);//6
+			var yearCodeResultStr = "6. Year Code: " + checkCode(yearCode, year, vinVehicleNoStr[5]);//6
 			appendResult(yearCodeResultStr.toString(), vincode_result_id);
-			var monthCodeResultStr = "7. Month Code: " + checkCode(monthCode, month, vinCodeString[6]);//7
+			var monthCodeResultStr = "7. Month Code: " + checkCode(monthCode, month, vinVehicleNoStr[6]);//7
 			appendResult(monthCodeResultStr.toString(), vincode_result_id);
-			var serialNumber = "8. Serial Number: " + vinCodeString.substring(7, 11);//8
+			var serialNumber = "8. Serial Number: " + vinVehicleNoStr.substring(7, 11);//8
 			appendResult(serialNumber.toString(), vincode_result_id);
-			var driveCodeResultStr = "9. Drive Code: " + checkCode(driveCode, drive, vinCodeString[12]);//9
+			
+			var vinDrivestr = vinDrive.value.toString();
+			//Using the 2nd input
+			var driveCodeResultStr = "9. Drive Code: " + checkCode(driveCode, drive, vinDrivestr[0]);//9
 			appendResult(driveCodeResultStr.toString(), vincode_result_id);
-			var engineCodeResultStr = "10. Engine Code: " + checkCode(engineCode, engine, vinCodeString.substring(13, 15));//10
+			
+			var vinEnginestr = vinEngine.value.toString();
+			//Using the 3rd input
+			var engineCodeResultStr = "10. Engine Code: " + checkCode(engineCode, engine, vinEnginestr);//10
 			appendResult(engineCodeResultStr.toString(), vincode_result_id);
-			var gearboxResultStr = "11. Gearbox: " + checkCode(gearboxCode, gearbox, vinCodeString[15]);//11
+			
+			var vinTransStr = vinTrans.value.toString();
+			//Using the 4th input
+			var gearboxResultStr = "11. Gearbox: " + checkCode(gearboxCode, gearbox, vinTransStr);//11
 			appendResult(gearboxResultStr.toString(), vincode_result_id);
-			var axleRatioResultStr = "12. Axle Ratio: " + checkCode(axleRatioCode, axleRatio, vinCodeString[16]);//12
+			
+			var vinAxleStr = vinAxle.value.toString();
+			//Using the 5th input
+			var axleRatioResultStr = "12. Axle Ratio: " + checkCode(axleRatioCode, axleRatio, vinAxleStr[0]);//12
 			appendResult(axleRatioResultStr.toString(), vincode_result_id);
-			var axleLockResultStr = "13. Axle Lock: " + checkCode(axleLockCode, axleLock, vinCodeString[17]);//13
+			var axleLockResultStr = "13. Axle Lock: " + checkCode(axleLockCode, axleLock, vinAxleStr[1]);//13
 			appendResult(axleLockResultStr.toString(), vincode_result_id);
-			var bodyColourResultStr = "14. Body Colour: " + checkCode(bodyColourCode, bodyColour, vinCodeString[18]);//14
+			
+			var vinColourStr = vinColour.value.toString();
+			//Using the 6th input
+			var bodyColourResultStr = "14. Body Colour: " + checkCode(bodyColourCode, bodyColour, vinColourStr[0]);//14
 			appendResult(bodyColourResultStr.toString(), vincode_result_id);
-			var vinylRoofResultStr = "15. Vinyl Roof: " + checkCode(vinylRoofCode, vinylRoof, vinCodeString[19]);//15
+			var vinylRoofResultStr = "15. Vinyl Roof: " + checkCode(vinylRoofCode, vinylRoof, vinColourStr[1]);//15
 			appendResult(vinylRoofResultStr.toString(), vincode_result_id);
-			var interiorTrimResultStr = "16. Interior Trim: " + checkCode(interiorTrimCode, interiorTrim, vinCodeString[20]);//16
+			
+			var vinTrimStr = vinTrim.value.toString();
+			//Using the 7th input
+			var interiorTrimResultStr = "16. Interior Trim: " + checkCode(interiorTrimCode, interiorTrim, vinTrimStr);//16
 			appendResult(interiorTrimResultStr.toString(), vincode_result_id);
-			var radioResultStr = "17. Radio: " + checkCode(radioCode, radio, vinCodeString[21]);//17
+			
+			var vinLDOStr = vinLDO.value.toString();
+			//Using the last input
+			var radioResultStr = "17. Radio: " + checkCode(radioCode, radio, vinLDOStr[0]);//17
 			appendResult(radioResultStr.toString(), vincode_result_id);
-			var instrumentPanelResultStr = "18. Instrument Panel: " + checkCode(instrumentPanelCode, instrumentPanel, vinCodeString[22]);//18
+			var instrumentPanelResultStr = "18. Instrument Panel: " + checkCode(instrumentPanelCode, instrumentPanel, vinLDOStr[1]);//18
 			appendResult(instrumentPanelResultStr.toString(), vincode_result_id);
-			var windShieldResultStr = "19. Windshield: " + checkCode(windShieldCode, windShield, vinCodeString[23]);//19
+			var windShieldResultStr = "19. Windshield: " + checkCode(windShieldCode, windShield, vinLDOStr[2]);//19
 			appendResult(windShieldResultStr.toString(), vincode_result_id);
-			var seatsResultStr = "20. Seats: " + checkCode(seatsCode, seats, vinCodeString[24]);//20
+			var seatsResultStr = "20. Seats: " + checkCode(seatsCode, seats, vinLDOStr[3]);//20
 			appendResult(seatsResultStr.toString(), vincode_result_id);
-			var suspensionResultStr = "21. Suspension: " + checkCode(suspensionCode, suspension, vinCodeString[25]);//21
+			var suspensionResultStr = "21. Suspension: " + checkCode(suspensionCode, suspension, vinLDOStr[4]);//21
 			appendResult(suspensionResultStr.toString(), vincode_result_id);
-			var brakesResultStr = "22. Brakes: " + checkCode(brakesCode, brakes, vinCodeString[26]);//22
+			var brakesResultStr = "22. Brakes: " + checkCode(brakesCode, brakes, vinLDOStr[5]);//22
 			appendResult(brakesResultStr.toString(), vincode_result_id);
-			var wheelsResultStr = "23. Wheels: " + checkCode(wheelsCode, wheels, vinCodeString[27]);//23
+			var wheelsResultStr = "23. Wheels: " + checkCode(wheelsCode, wheels, vinLDOStr[6]);//23
 			appendResult(wheelsResultStr.toString(), vincode_result_id);
-			var rearWindowResultStr = "24. Rear Window: " + checkCode(rearWindowCode, rearWindow, vinCodeString[28]);//24
+			var rearWindowResultStr = "24. Rear Window: " + checkCode(rearWindowCode, rearWindow, vinLDOStr[7]);//24
 			appendResult(rearWindowResultStr.toString(), vincode_result_id);
+			document.getElementById("vinplatestr").innerHTML = combineVinCode().toString();
 		}
 		function appendResult(result, vincode_result_id)
 		{
+			//This function creates individual list nodes
 			const element = document.createElement("li");
 			const resultTextNode = document.createTextNode(result.toString());
 			element.appendChild(resultTextNode);
 			document.getElementById(vincode_result_id.id).appendChild(element);
 		}
 		
+		function combineVinCode()
+		{
+			console.log("test");
+			//This is just  a silly little function that I left in for some other code checking bit that no longer is needed
+			//Now is just a literal string combiner for the last output when 
+			var combinedVinCode = 
+				document.getElementById("vin_type").value 
+				+ document.getElementById("vin_version").value 
+				+ document.getElementById("vin_vehicleNo").value 
+				+ document.getElementById("vin_drive").value 
+				+ document.getElementById("vin_engine").value 
+				+ document.getElementById("vin_trans").value 
+				+ document.getElementById("vin_axle").value 
+				+ document.getElementById("vin_colour").value
+				+ document.getElementById("vin_trim").value
+				+ document.getElementById("vin_ldo").value;
+			return combinedVinCode;
+		}
 		
 		function checkCode(code, result, input)
 		{
+			//If the input is null, let's return null, javascript does an undefined value when the value doesn't exist yet, which can mess up the
+			//real time decoding
+			if(input == null)
+			{
+				return null;
+			}
+			//Loop through the input, and check if it equals to code index, if so print the result!
 			for (let i = 0; i < code.length; i++) 
 			{
-				if(input == code[i])
+				if(caseChecker(input) == code[i])
 				{
 					return result[i];
 				}
 			}
 		}
 		
+		function caseChecker(charCode)
+		{//Yay for regex character checking, woo!
+			if(!(/[a-z]/.test(charCode)) && !(/[A-Z]/.test(charCode)))
+			{
+				return charCode;
+			}
+			//If the character is not upper case, let's return the upper case character value
+			if(charCode != charCode.toUpperCase())
+			{
+				return charCode.toUpperCase();
+			}
+			//Otherwise let's just return the character
+			return charCode;
+		}
+		function inputFocusHandler()
+		{
+			//Create an array for all the vin_ elements
+			var vinElements = document.getElementsByTagName("input");
+			//Create events for each (excluding the last element since there is no new element to focus after) input element Type
+			//Wherein once the input has reached it's max length amount, let's focus on the next element in the list
+			for(let i = 0; i < vinElements.length - 1; i++)
+			{
+				vinElements[i].onkeyup = function(e)
+				{
+					var inputElement = e.srcElement;
+					var maxInputLength = parseInt(inputElement.attributes["maxlength"].value, 10);
+					var currentLength = inputElement.value.length;
+					if(currentLength >= maxInputLength && i + 1 < vinElements.length)
+					{
+						var nextInput = vinElements[i + 1].focus();
+					}
+				}
+		}
+		}
 		</script>
 	</body>
 </html>

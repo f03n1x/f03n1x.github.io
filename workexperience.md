@@ -3,8 +3,11 @@ customeditor: jCVudODvoX8
 gameplayvidCV: FALoPKNmubI
 gameplayvidRG: 429lP0N91YM
 ---
+<br>
+<h2 style="text-align: center;">
+Work Experience
+</h2>
 
-# Work Experience
 * * *
 ### Lead Developer for Caravanguard
 
