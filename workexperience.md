@@ -1,7 +1,6 @@
 ---
 customeditor: jCVudODvoX8
 gameplayvidCV: FALoPKNmubI
-gameplayvidRG: 429lP0N91YM
 ---
 <br>
 <h2 style="text-align: center;">
@@ -9,9 +8,13 @@ Work Experience
 </h2>
 
 * * *
+### Lead Developer for DataScape (working title)
+
+I'm currently working on a multiplayer extraction RPG with a friend. Some ideas are inspired from the Megaman Battle Network Series. It utilizes the codebase from the Caravanguard project. Using the Action system as the basis for the player combat, we've developed it further, I cannot wait until people are able to play it!
+
 ### Lead Developer for Caravanguard
 
-I'm currently working with a group of friends on a multiplayer action-rpg/roguelite called Caravanguard. The player's system is my pride and joy as a game developer, in the way that it feels fluid and concise. The system heavily involes the use of animations, which let me learn to setup everything revolving the animation event system. I spent a fair amount of time learning how the UI system works in Unity since that was something I had not originally looked into, and out of that I was able to create all the UI that the player interacts with. 
+I'm previously worked with a friend on a multiplayer action-rpg/roguelite called Caravanguard. The player's system is my pride and joy as a game developer, in the way that it feels fluid and concise. The system heavily involes the use of animations, which let me learn to setup everything revolving the animation event system. I spent a fair amount of time learning how the UI system works in Unity since that was something I had not originally looked into, and out of that I was able to create all the UI that the player interacts with. 
 
 Some of the systems I've worked on:
 
@@ -34,10 +37,6 @@ This is a video of a custom editor I made for artifact placement, it was really 
 <a href="https://store.steampowered.com/app/1117200/Redemptions_Guild/">Redemption's Guild Store Page</a>
 
 I worked with Unlit Games on Redemption's Guild, at first I was the only programmer, but as time passed I ended up becoming accustomed to the project and was able to help any new programmers that joined us, along with also being a part of the interview process when hiring people. I helped fix time sensitive bugs for the alpha, beta, early access and full release stages of the game.
-
-This is some of the work I've done, I created the Loot collection and parry system:
-
-{% include youtubePlayer.html id=page.gameplayvidRG %}
 
 It's quite hard to breakdown everything I worked on because I worked on qutie a lot of features, but I will try to keep the list brief:
 
