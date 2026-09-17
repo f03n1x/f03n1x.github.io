@@ -5,7 +5,7 @@
 
 #### Mark Manson | <img src="/assets/images/fern.png" width="20" height="20"> Auckland, New Zealand | <img src="/assets/images/Message-Mail-256.png" width="20" height="20"> mark.manson.work@gmail.com  | +642102204595
 <hr/>
-I’m Mark Manson, A VR/Game Developer with over 5 years of experience. I’m an avid gamer, programmer and love to work on games!
+I’m Mark Manson, A Game Developer with over 5 years of experience. I’m an avid gamer, programmer and love to work on games!
 
 My first job in the software development world was working on a mobile app, I handled developing the app for Android and iOS in separate programming languages, talking to the project manager, doing the design, testing the app on both platforms and then upload it to the google play/app store.
 
