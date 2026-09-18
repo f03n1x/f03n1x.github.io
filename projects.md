@@ -23,6 +23,7 @@ I am using the <a href="https://github.com/pages-themes/midnight">Midnight Theme
 Art Assets:  
 <a href="https://www.cleanpng.com/png-new-zealand-computer-icons-silver-fern-aotearoa-fe-926848/download-png.html">Fern Icon</a> <a href="https://flaticons.net/custom.php?i=3RkivmFy3ABGtnIxInIX7IrEB2psy">Mail Icon</a>
 
+
 ### Side Project Town Management VR Game [Unity3d]
 
 Prior to working on Redemption's Guild and during the time I was looking for a job, I worked on a VR Town Management Game. Basically the game consists of two stages, the first stage being the general survival-esque genre where the player gathers materials and creates items, crafts objects and such. The second stage would be creating a town for you and your AI to live and survive in, where the AI would be able to do everything the player could, so you would let them to all the mini-games/jobs you didn't like while you got to focus on the ones you liked. This project only got up to the crafting phase, where I experimented with VR, learning the ropes of how things worked.
